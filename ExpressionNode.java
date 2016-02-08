@@ -14,7 +14,7 @@ public class ExpressionNode extends TreeNode
    //-----------------------------------------------------------------
    public ExpressionNode (String val, ExpressionNode left, ExpressionNode right)
    {
-      super();
+      super(val,left,right);
    }
 
    //-----------------------------------------------------------------
