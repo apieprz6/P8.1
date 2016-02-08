@@ -4,9 +4,10 @@
  */
 public class ExpressionTree
 {
+    private ExpressionNode root;
     public ExpressionTree(String s)
     {
-
+        root=build(s);
     }
 
     //-----------------------------------------------------------------
@@ -23,7 +24,26 @@ public class ExpressionTree
     //-----------------------------------------------------------------
     private ExpressionNode build(String s)
     {
-
+        ExpressionNode current;
+        int operatorIndex =-1;
+        if(s.lastIndexOf("-")>operatorIndex){
+            operatorIndex = s.lastIndexof("-");
+        }
+        if(s.lastIndexOf("+")>operatorIndex){
+            operatorIndex = s.lastIndexof("+");
+        }
+        if(operatorIndex<=0 && s.lastIndexOf("*")>operatorIndex){
+            operatorIndex = s.lastIndexof("*");
+        }
+        else if(s.lastIndexOf("/")>operatorIndex){
+            operatorIndex = s.lastIndexof("/");
+        }
+        else if(s.lastIndexOf("%")>operatorIndex){
+            operatorIndex = s.lastIndexof("%");
+        }
+        if(operatorIndex==-1){
+            return 
+        }
     }
 
 }
