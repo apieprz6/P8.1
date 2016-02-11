@@ -42,9 +42,10 @@ public class ExpressionTree
             operatorIndex = s.lastIndexof("%");
         }
         if(operatorIndex==-1){
-            return 
+            current = s;
+            return current;
         }
-        current
+        current(operatorIndex,build(
     }
 
 }
