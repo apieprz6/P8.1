@@ -44,6 +44,7 @@ public class ExpressionTree
         if(operatorIndex==-1){
             return 
         }
+        current
     }
 
 }
