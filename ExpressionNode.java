@@ -24,7 +24,8 @@ public class ExpressionNode extends TreeNode
    public int getExprValue()
    {
       String val = (String) getValue();
-      current 
+      int x=0;
+      return x;
       
    }
 }

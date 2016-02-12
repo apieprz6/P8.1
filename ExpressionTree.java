@@ -1,3 +1,4 @@
+//import java.io.*;
 /**
  * The class creates a binary tree that represents an arithmetic expression
  * of ints with operators +,-,*,/ and %.
@@ -16,7 +17,8 @@ public class ExpressionTree
     //-----------------------------------------------------------------
     public int EvaluateTree()
     {
-
+        int x=0;
+        return x;
     }
 
     //-----------------------------------------------------------------
@@ -27,25 +29,25 @@ public class ExpressionTree
         ExpressionNode current;
         int operatorIndex =-1;
         if(s.lastIndexOf("-")>operatorIndex){
-            operatorIndex = s.lastIndexof("-");
+            operatorIndex = s.lastIndexOf("-");
         }
         if(s.lastIndexOf("+")>operatorIndex){
-            operatorIndex = s.lastIndexof("+");
+            operatorIndex = s.lastIndexOf("+");
         }
         if(operatorIndex<=0 && s.lastIndexOf("*")>operatorIndex){
-            operatorIndex = s.lastIndexof("*");
+            operatorIndex = s.lastIndexOf("*");
         }
         else if(s.lastIndexOf("/")>operatorIndex){
-            operatorIndex = s.lastIndexof("/");
+            operatorIndex = s.lastIndexOf("/");
         }
         else if(s.lastIndexOf("%")>operatorIndex){
-            operatorIndex = s.lastIndexof("%");
+            operatorIndex = s.lastIndexOf("%");
         }
         if(operatorIndex==-1){
-            current = s;
+            current = new ExpressionNode(s, null,null);
             return current;
         }
-        current(operatorIndex,build(
+        return current = new ExpressionNode(s.substring(operatorIndex),build(s.substring(0,s.lastIndexOf(operatorIndex))),build(s.substring(s.lastIndexOf(operatorIndex),s.charAt(s.length( ) - 1))));
     }
 
 }
