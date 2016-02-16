@@ -47,7 +47,7 @@ public class ExpressionTree
             current = new ExpressionNode(s, null,null);
             return current;
         }
-        return current = new ExpressionNode(s.substring(operatorIndex),build(s.substring(0,s.lastIndexOf(operatorIndex))),build(s.substring(s.lastIndexOf(operatorIndex),s.charAt(s.length( ) - 1))));
+        return current = new ExpressionNode(""+s.charAt(operatorIndex),build(s.substring(0,operatorIndex)),build(s.substring(operatorIndex+1)));
     }
 
 }
