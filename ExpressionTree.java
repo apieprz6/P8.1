@@ -17,8 +17,8 @@ public class ExpressionTree
     //-----------------------------------------------------------------
     public int EvaluateTree()
     {
-        int x=0;
-        return x;
+        int val=root.getExprValue();
+        return val;
     }
 
     //-----------------------------------------------------------------
@@ -37,10 +37,10 @@ public class ExpressionTree
         if(operatorIndex<=0 && s.lastIndexOf("*")>operatorIndex){
             operatorIndex = s.lastIndexOf("*");
         }
-        else if(s.lastIndexOf("/")>operatorIndex){
+        if(s.lastIndexOf("/")>operatorIndex){
             operatorIndex = s.lastIndexOf("/");
         }
-        else if(s.lastIndexOf("%")>operatorIndex){
+        if(s.lastIndexOf("%")>operatorIndex){
             operatorIndex = s.lastIndexOf("%");
         }
         if(operatorIndex==-1){
