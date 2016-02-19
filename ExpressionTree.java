@@ -37,10 +37,10 @@ public class ExpressionTree
         if(operatorIndex<=0 && s.lastIndexOf("*")>operatorIndex){
             operatorIndex = s.lastIndexOf("*");
         }
-        if(s.lastIndexOf("/")>operatorIndex){
+        if(operatorIndex<=0 && s.lastIndexOf("/")>operatorIndex){
             operatorIndex = s.lastIndexOf("/");
         }
-        if(s.lastIndexOf("%")>operatorIndex){
+        if(operatorIndex<=0 && s.lastIndexOf("%")>operatorIndex){
             operatorIndex = s.lastIndexOf("%");
         }
         if(operatorIndex==-1){

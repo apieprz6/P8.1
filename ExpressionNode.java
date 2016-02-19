@@ -24,8 +24,26 @@ public class ExpressionNode extends TreeNode
    public int getExprValue()
    {
       String val = (String) getValue();
-      int x=0;
-      return x;
+      ExpressionNode left = (ExpressionNode) getLeft();
+      ExpressionNode right = (ExpressionNode) getRight();
+      if(val.equals("+")){
+          return left.getExprValue() + right.getExprValue();
+      }
+      else if(val.equals("-")){
+          return left.getExprValue() - right.getExprValue();
+      }
+      else if(val.equals("*")){
+          return left.getExprValue() * right.getExprValue();
+      }
+      else if(val.equals("/")){
+          return left.getExprValue() / right.getExprValue();
+      }
+      else if(val.equals("%")){
+          return left.getExprValue() % right.getExprValue();
+      }
+      else{
+          return Integer.parseInt(val);
+      }
       
    }
 }
